@@ -3,26 +3,6 @@ import { ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import { AppRegistry, Text, View } from 'react-native';
 
-
-import * as firebase from 'firebase';
-
-// Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyAaU9WGnCiUtXK5piych-okQngLUxSjBqI",
-  authDomain: "curfew-81f8f.firebaseapp.com",
-  databaseURL: "https://curfew-81f8f.firebaseio.com/",
-  storageBucket: "curfew-81f8f.appspot.com"
-};
-
-firebase.initializeApp(firebaseConfig);
-
-// Get a reference to the database service
-var database = firebase.database();
-var childArray = new Array(); 
-childArray = [{name: "Emily", value: "alsoEmily"}, {name: "Abby", value: "alsoAbby"}];
-var childArray2 = database.ref('parents/Sue');
-firebase.database().ref('parents/Sue/Emily').set({name: "NotEmily"});
-
 import * as firebase from 'firebase';
 
 // Initialize Firebase
@@ -33,7 +13,18 @@ const firebaseConfig = {
   storageBucket: "curfew-81f8f.appspot.com"
 };
 
+
 firebase.initializeApp(firebaseConfig);
+
+// Get a reference to the database service
+var database = firebase.database();
+var childArray = new Array(); 
+childArray = [{name: "Emily", value: "alsoEmily"}, {name: "Abby", value: "alsoAbby"}];
+var childArray2 = database.ref('parents/Sue');
+firebase.database().ref('parents/Sue/Emily').set({name: "NotEmily"});
+
+
+
 
 // Get a reference to the database service
 var database = firebase.database();
