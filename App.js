@@ -4,7 +4,9 @@ import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons } from '@expo/vector-icons';
 import RootNavigation from './navigation/RootNavigation';
 
+
 export default class App extends React.Component {
+
   state = {
     assetsAreLoaded: false,
   };
